@@ -1,0 +1,326 @@
+body {
+    margin: 0; 
+    font-family: 'Josefin Slab', serif; 
+    background-color:#DFE5EC; 
+}
+
+/* верх */
+.site-header {
+    background-color: #28281C; 
+    padding: 10px 20px; 
+}
+.site-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-content {
+    max-width: 1425px; 
+    margin: 0 auto; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+/* лого */
+.logo img {
+    display: block; 
+    height: 35px; 
+    width: auto; 
+}
+
+/* поиск верх */
+.search-container {
+    flex-grow: 1; 
+    max-width: 700px; 
+    position: relative; 
+}
+.search-input {
+    width: 100%; 
+    padding: 4px 15px; 
+    border: 1px solid #B15236; 
+    border-radius: 25px; 
+    background-color: #DFE5EC; 
+    font-size: 14px; 
+    outline: none; 
+    box-sizing: border-box; 
+    height: 100%; 
+    color: #B15236; 
+}
+
+/* лупа */
+.search-button {
+    position: absolute; 
+    right: 10px; 
+    top: 50%; 
+    transform: translateY(-50%);
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    padding: 0; 
+}
+.search-button img {
+    display: block; 
+    width: 18px; 
+    height: 18px; 
+}
+
+.header-nav {
+    display: flex; /* расстояние верх эл. */
+    gap: 30px; 
+}
+
+.nav-icon {
+    display: block; 
+    width: 25px; 
+    height: 25px; 
+}
+
+.nav-icon img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* разделитель */
+.main-content-placeholder {
+    height: 8px; 
+    background-color: #606062;
+    width: 100%; 
+}
+
+
+
+/* жанры */
+.genre-section {
+    margin-bottom: 40px;
+    max-width: 1425px;
+    padding: 0 20px 0 60px;
+    margin-top: 90px;
+}
+
+.genre-title {
+    font-size: 2em;
+    color: #B15236;
+    font-family: 'Inter', sans-serif;
+}
+
+.genre-list {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px; 
+}
+
+.genre-button {
+    background-color: transparent;  /* прозрачный */
+    color: #B15236; /* текст */
+    border: 1px solid #B15236; /* края */
+    border-radius: 25px;      
+    padding: 8px 15px; 
+    cursor: pointer;  
+    font-size: 1em;          
+    font-family: 'Inter', sans-serif; 
+    white-space: nowrap;      
+    transition: all 0.2s ease-in-out; /* аним */
+}
+
+.genre-button:hover {
+    background-color: #B15236; /* при наведении */ 
+    color: #DFE5EC; /* текст */ 
+}
+
+
+
+
+
+
+
+.container {
+    margin-left: 80px;
+    font-family: 'Inter', sans-serif; 
+    display: flex;
+    gap: 50px;  /* расстояние между */
+    padding: 20px;
+    color: #B15236;
+    margin-bottom: 10px;
+}
+
+.book-card {
+    
+    border-radius: 15px;
+    display: flex;
+    width: 600px; /* ширина */
+}
+
+.book-cover {
+    width: 200px;
+    height: auto; 
+    border-radius: 15px;
+    margin-right: 20px;
+    object-fit: cover; 
+}
+
+.book-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #61251A; 
+}
+
+.book-info h2 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    color: #B15236;
+}
+
+.book-info .author {
+    font-family: 'Josefin Slab', serif; 
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #61251A; 
+}
+
+.book-info .stats {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.book-info .stats img {
+    font-family: 'Josefin Slab', serif; 
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+.book-info p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #B15236;
+}
+
+.book-info .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.book-info .tags span {
+        background-color: transparent;  /* без фона */
+    color: #B15236; /* текст */
+    border: 1px solid #B15236; /* края */
+    border-radius: 25px;      
+    padding: 4px 15px; 
+    cursor: pointer;  
+    font-size: 1em;          
+    font-family: 'Inter', sans-serif; 
+    white-space: nowrap;      
+    transition: all 0.2s ease-in-out; /* аним */
+}
+
+.book-info .tags span:hover {
+    background-color: #B15236; /* при наведении */ 
+    color: #DFE5EC; 
+}
+
+
+
+.show-more {
+    margin-left: 228px;
+    max-width: 1000px;   /* Ограничьте ширину */
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/*  "Показать еще"  */
+.show-more-button {
+    background-color: #606062;
+    color: #DFE5EC;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 80px;  
+    font-size: 1em;
+    font-family: 'Inter', sans-serif; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 60%; 
+    margin: 0 auto; 
+}
+
+.show-more-button:hover {
+    background-color: #444;  /*  при наведении */
+}
+
+
+
+
+
+
+
+
+.footer {
+    background: url('Group\ 97.svg') no-repeat center center;
+    background-size: cover;
+    padding: 15px 20px;
+    color: #DFE5EC;
+}
+
+.footer-content {
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 100px;
+    justify-content: flex-end;
+}
+
+.footer-links a {
+    color: #DFE5EC;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.footer-social a {
+    color: #DFE5EC;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-main-content {
+    text-align: left;
+    gap: 130px;
+    margin-bottom: 10px;
+    margin-left: 20px; 
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+}
+
+

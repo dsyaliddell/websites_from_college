@@ -1,0 +1,386 @@
+body {
+    margin: 0; 
+    font-family: 'Josefin Slab', serif; 
+    background-color: #DFE5EC; 
+}
+
+/* верх */
+.site-header {
+    background-color: #28281C; 
+    padding: 10px 20px; 
+}
+.site-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-content {
+    max-width: 1425px; 
+    margin: 0 auto; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+/* лого */
+.logo img {
+    display: block; 
+    height: 35px; 
+    width: auto; 
+}
+
+/* поиск верх */
+.search-container {
+    flex-grow: 1; 
+    max-width: 700px; 
+    position: relative; 
+}
+.search-input {
+    width: 100%; 
+    padding: 4px 15px; 
+    border: 1px solid #B15236; 
+    border-radius: 25px; 
+    background-color: #DFE5EC; 
+    font-size: 14px; 
+    outline: none; 
+    box-sizing: border-box; 
+    height: 100%; 
+    color: #B15236; 
+}
+
+/* лупа */
+.search-button {
+    position: absolute; 
+    right: 10px; 
+    top: 50%; 
+    transform: translateY(-50%);
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    padding: 0; 
+}
+.search-button img {
+    display: block; 
+    width: 18px; 
+    height: 18px; 
+}
+
+.header-nav {
+    display: flex; /* расстояние верх эл. */
+    gap: 30px; 
+}
+
+.nav-icon {
+    display: block; 
+    width: 25px; 
+    height: 25px; 
+}
+
+.nav-icon img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* разделитель */
+.main-content-placeholder {
+    height: 8px; 
+    background-color: #606062;
+    width: 100%; 
+}
+
+
+
+
+.book-details {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;         /* между обложкойiинформацией */
+    padding: 20px;
+    max-width: 1250px;   /* огран ширину */
+    margin: 0 auto;    
+    color: #B15236
+}
+
+.book-cover {
+    width: 250px; 
+    border-radius: 10px;  
+}
+
+/* информации о книге */
+.book-info {
+    flex: 1;   
+}
+
+.book-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.0em;
+    margin-bottom: 5px;
+}
+.book-author {
+    font-family: 'Inter', sans-serif;
+    color: #61251A;
+}
+
+.genre-section {
+    margin-bottom: 20px;
+}
+
+.genre-title {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.genre-list {
+    display: flex;
+    flex-wrap: wrap;  
+    gap: 10px;        
+}
+
+.genre-button {
+    background-color: transparent; 
+    color: #B15236; 
+    border: 1px solid #B15236; 
+    border-radius: 25px;         
+    padding: 8px 15px;      
+    cursor: pointer;            
+    font-size: 1em;            
+    font-family: 'Inter', sans-serif; 
+    white-space: nowrap;        
+    transition: all 0.2s ease-in-out; /* анимация */
+}
+
+.genre-button:hover {
+    background-color: #B15236; /*  при наведении */
+    color: #DFE5EC;    
+}
+
+/* теги */
+.tag-section {
+    margin-bottom: 20px;
+}
+
+.tag-title {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag-button {
+    background-color: transparent;
+    border: 1px solid #B15236;
+    color: #B15236;
+    border-radius: 20px;
+    padding: 5px 12px;
+    cursor: pointer;
+    font-size: 0.9em;
+    white-space: nowrap;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.tag-button:hover {
+    background-color: #B15236;
+    color: #DFE5EC;
+}
+
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.read-button, .like-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #B15236;
+    color: #DFE5EC;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.read-button:hover, .like-button:hover {
+    background-color: #61251A;
+}
+
+
+
+/* Описание истории*/
+.story-description {
+    margin-left: 100px;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 85%; 
+    margin-top: 20px;  
+    font-family: 'Inter', sans-serif; 
+}
+
+.story-title {
+    color: #61251A;  
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #B15236;
+}
+
+/* Текст */
+.story-text {
+    color: #B15236;
+    font-size: 1em;
+    line-height: 1.6; 
+}
+
+.table-of-contents {
+    font-family: 'Inter', sans-serif; 
+    margin-top: 20px;  
+}
+
+.toc-title {
+    color: #B15236;
+    font-size: 1.4em; 
+    margin-bottom: 20px; 
+    margin-left: 120px;
+}
+
+/* Список глав */
+.toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding: 10px 40px; 
+}
+
+.toc-item {
+    margin-left: 80px;
+    max-width: 800px; 
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;   
+    padding: 12px 20px;  
+    margin-bottom: 8px;   
+    border: 1px solid #B15236;
+    border-radius: 30px;  
+    color: #28281C;  
+}
+
+/* Номер главы */
+.chapter-number {
+    font-weight: bold;
+    color: #B15236;
+}
+
+/* Название главы */
+.chapter-title {
+    color: #B15236;
+    flex-grow: 1;  
+    margin-left: 10px;   
+}
+
+/* Дата */
+.chapter-date {
+    color: #606062;  
+    color: #B15236;
+    font-size: 0.9em;
+}
+
+/*  "Показать еще"  */
+.show-more {
+    margin-left: 125px;
+    max-width: 800px;   /* Ограничить ширину */
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Кнопка "Показать еще"  */
+.show-more-button {
+    background-color: #606062;
+    color: #DFE5EC;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 40px;  
+    font-size: 1em;
+    font-family: 'Inter', sans-serif; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 60%; 
+    margin: 0 auto; 
+}
+
+.show-more-button:hover {
+    background-color: #444;  /*  при наведении */
+}
+
+
+
+
+
+.footer {
+    background: url('Group\ 97.svg') no-repeat center center;
+    background-size: cover;
+    padding: 15px 20px;
+    color: #DFE5EC;
+}
+
+.footer-content {
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 100px;
+    justify-content: flex-end;
+}
+
+.footer-links a {
+    color: #DFE5EC;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.footer-social a {
+    color: #DFE5EC;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-main-content {
+    text-align: left;
+    gap: 130px;
+    margin-bottom: 10px;
+    margin-left: 20px; 
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+}
+
+
