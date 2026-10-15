@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <link rel="stylesheet" href="товар.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="Главная.html"><img src="C:\Users\79647\Desktop\Сайт Animyau\картинки\logo.png" alt="Логотип"></a>
+            <span>AniMyau</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="оНас.html">О нас</a></li>
+                <li><a href="манга.html">Манга</a></li>
+                <li><a href="фигурки.html">Фигурки</a></li>
+                <li><a href="#">Дакимакуры</a></li>
+                <li class="dropdown">
+                    <a href="#">Прочее</a>
+                    <ul class="dropdown-content">
+                        <li><a href="косплей.html">Косплей</a></li>
+                        <li><a href="#">Одежда</a></li>
+                        <li><a href="#">Концелярия</a></li>
+                        <li><a href="#">Рюдзаки и сумки</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <a href="корзина.html"><img src="C:\Users\79647\Desktop\Сайт Animyau\картинки\иконки\free-icon-font-shopping-cart.png" alt="Корзина"></a>
+            <a href="избран.html"><img src="C:\Users\79647\Desktop\Сайт Animyau\картинки\иконки\free-icon-font-heart.png" alt="Избранное"></a>
+            <a href="#" class="user-icon">
+                <img src="C:\Users\79647\Desktop\Сайт Animyau\картинки\иконки\free-icon-font-user.png" alt="Аккаунт">
+                <div class="user-dropdown">
+                    <div class="user-dropdown-content">
+                        <div class="user-dropdown-item">Войти</div>
+                        <div class="user-dropdown-item"><label for="login">Логин:</label>
+                            <input type="text" id="login" name="login">
+                        </div>
+                        <div class="user-dropdown-item"><label for="password">Пароль:</label>
+                            <input type="password" id="password" name="password">
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    
+    <!-- Основной контент страницы -->
+           
+
+    <main class="main-container">
+        <div class="image-container">
+            <img src="C:\Users\79647\Desktop\Сайт Animyau\картинки\наполнение\2.2.webp" alt="Вставленное изображение">
+        </div>
+        <div class="text-container">
+            <br><br>
+            <p>Фигурка 1/7 Тенси (Tachibana Kanade</p>
+            <p>Wedding Ver.)</p><br>
+            <p>Сериал (Аниме): Angel Beats! (Ангельские Ритмы)</p>
+            <p>Персонаж: Tachibana Kanade</p>
+            <p>Тип фигурки: Модель в сборе</p>
+            <p>Производитель: Kadokawa</p>
+            <p>Материал: ПВХ, пластмасса</p>
+            <p>Высота: 225 мм</p>
+            <p>Подлинность: Оригинал</p>
+        </div>
+        <div class="price-panel">
+            <div class="price">15 746 ₽ <span class="discount-price">     18 626 ₽</span></div>
+            <div class="product-actions">
+                <a href="корзина.html" class="add-to-cart">в корзину</a>
+                <button class="favorite-button" data-favorited="false">
+                    <img src="C:\Users\79647\Desktop\Сайт Animyau\картинки\иконки\free-icon-font-heart.png" alt="Добавить в избранное" class="heart-icon">
+                    <img src="C:\Users\79647\Desktop\Сайт Animyau\картинки\иконки\free-icon-font-heart1.png" alt="Удалить из избранного" class="heart-icon favorited">
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <br>
+    <div class="category-container">
+        <div class="category" onclick="location.href='манга.html'">
+            <img src="C:\Users\79647\Desktop\Сайт Animyau\картинки\манга.jpg" alt="Манга">
+            <div class="category-name">манга</div>
+        </div>
+        <div class="category" onclick="location.href='фигурки.html'">
+            <img src="C:\Users\79647\Desktop\Сайт Animyau\картинки\фигурки.jpg" alt="Фигурка">
+            <div class="category-name">фигурки</div>
+        </div>
+        <div class="category" onclick="location.href='page3.html'">
+            <img src="C:\Users\79647\Desktop\Сайт Animyau\картинки\image.png" alt="Подушка">
+            <div class="category-name">подушки</div>
+        </div>
+        <div class="category" onclick="location.href='косплей.html'">
+            <img src="C:\Users\79647\Desktop\Сайт Animyau\картинки\косплей.jpg" alt="Костюм">
+            <div class="category-name">косплеи</div>
+        </div>
+    </div><br>
+
+
+<script>
+    const favoriteButtons = document.querySelectorAll('.favorite-button');
+    
+    favoriteButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const isFavorited = this.dataset.favorited === 'true';
+            this.dataset.favorited = !isFavorited;
+    
+            console.log('Товар добавлен в избранное: ' + !isFavorited);
+        });
+    });
+</script>
+
+    <footer>
+    <div class="footer-left">
+        <a href="Главная.html">главная</a>
+        <a href="каталог.html">каталог</a>
+        <a href="оНас.html">о нас</a><br>
+        <div class="footer-social">
+            <br><a href="#"><img src="C:\Users\79647\Desktop\Сайт Animyau\картинки\иконки\free-icon-font-youtube.png" alt="VK"></a>
+            <a href="#"><img src="C:\Users\79647\Desktop\Сайт Animyau\картинки\иконки\free-icon-font-discord.png" alt="Twitter"></a>
+            <a href="#"><img src="C:\Users\79647\Desktop\Сайт Animyau\картинки\иконки\free-icon-font-twitter.png" alt="дс"></a>
+            <a href="mailto:animyau@mail.ru">animyau@mail.ru</a>
+        </div>
+    </div>
+    <div class="footer-right">
+        <p>© аниме магазин в России AniMyau 2024-2025<br>
+        Все права защищены<br>
+        Интернет-магазин аниме аксессуаров, фигурок и манги</p>
+    </div>
+</footer>
+</body>
+</html>

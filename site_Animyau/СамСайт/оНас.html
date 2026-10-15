@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шапка сайта</title>
+    <link rel="stylesheet" href="oНас.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="Главная.html"><img src="C:\Users\79647\Desktop\Сайт Animyau\картинки\logo.png" alt="Логотип"></a>
+            <span>AniMyau</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="оНас.html">О нас</a></li>
+                <li><a href="манга.html">Манга</a></li>
+                <li><a href="фигурки.html">Фигурки</a></li>
+                <li><a href="#">Дакимакуры</a></li>
+                <li class="dropdown">
+                    <a href="#">Прочее</a>
+                    <ul class="dropdown-content">
+                        <li><a href="косплей.html">Косплей</a></li>
+                        <li><a href="#">Одежда</a></li>
+                        <li><a href="#">Концелярия</a></li>
+                        <li><a href="#">Рюдзаки и сумки</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <a href="корзина.html"><img src="C:\Users\79647\Desktop\Сайт Animyau\картинки\иконки\free-icon-font-shopping-cart.png" alt="Корзина"></a>
+            <a href="избран.html"><img src="C:\Users\79647\Desktop\Сайт Animyau\картинки\иконки\free-icon-font-heart.png" alt="Избранное"></a>
+            <a href="#" class="user-icon">
+                <img src="C:\Users\79647\Desktop\Сайт Animyau\картинки\иконки\free-icon-font-user.png" alt="Аккаунт">
+                <div class="user-dropdown">
+                    <div class="user-dropdown-content">
+                        <div class="user-dropdown-item">Войти</div>
+                        <div class="user-dropdown-item"><label for="login">Логин:</label>
+                            <input type="text" id="login" name="login">
+                        </div>
+                        <div class="user-dropdown-item"><label for="password">Пароль:</label>
+                            <input type="password" id="password" name="password">
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    
+    <!-- Основной контент страницы -->
+           
+    <main>
+        <br><br>
+        <div class="container">
+            <div class="image-container">
+                <img src="C:\Users\79647\Desktop\Сайт Animyau\картинки\о нас.png" alt="Аниме персонаж">
+            </div>
+            <div class="content">
+                <h2>О нас</h2>
+                <p>В зачарованном лесу Myau, где жили кошкоподобные существа, правила волшебница Ani.  Увидев другой мир, жаждущий волшебства, она отправила лучших мастеров в мир людей. </p>
+                <p>Они основали AniMyau — интернет-магазин аниме-товаров.</p>
+                <p>Мастера Myau продавали фигурки, мангу и аксессуары, наполненные вдохновением и волшебством. Их товары приносили радость и вдохновение.</p>
+                <p>Слухи об AniMyau разлетелись по всему миру. Люди находили здесь частичку сказки. Говорят, если прислушаться, можно почувствовать магию Myau. <br><br></p>
+                <p>Покупая в AniMyau, вы становитесь частью легенды, где мечты оживают в каждом предмете.</p>
+            </div>
+        </div>
+
+        <div class="container1">
+            <h2>Кому понравиться наш магазин?</h2>
+            <p>AniMyau, магазин с волшебной легендой о мастерах из Myau, понравится фанатам аниме и манги, коллекционерам, искателям оригинальных подарков, ценителям качества и детализации, подросткам и молодым людям, а также всем, кто хочет привнести яркие краски в свою жизнь. Это место, где можно выразить свою индивидуальность, найти единомышленников и прикоснуться к виртуальному миру вдохновения и красоты.</p>
+        </div>
+
+
+        <div id="reviews-container">
+            <div class="review-container" data-review-id="1">
+              <button class="arrow-button" onclick="showPreviousReview()">&#8592;</button>
+              <div class="review-image1">
+                <img src="C:\Users\79647\Desktop\Сайт Animyau\картинки\3.jpg" alt="Аватар 1">
+              </div>
+              <div class="review-content">
+                <h3>ArichaMasha</h3>
+                <p class="review-text">Сделала заказ на сайте и не взяла трубку, так как была занята. Работники всё собрали за 40 минут (у меня был большой заказ). Остались только положительные эмоции после распаковки товаров)</p>
+              </div>
+              <button class="arrow-button" onclick="showNextReview()">&#8594;</button>
+            </div>
+          
+            <div class="review-container hidden" data-review-id="2">
+              <button class="arrow-button" onclick="showPreviousReview()">&#8592;</button>
+              <div class="review-image2">
+                <img src="C:\Users\79647\Desktop\Сайт Animyau\картинки\1.jpg" alt="Аватар 2">
+              </div>
+              <div class="review-content">
+                <h3>Николай322neko</h3>
+                <p class="review-text">Все Супер! Всем рекомендую, большой выбор манги и быстрая доставка! Приехало в тот же день!))</p>
+              </div>
+              <button class="arrow-button" onclick="showNextReview()">&#8594;</button>
+            </div>
+          
+            <div class="review-container hidden" data-review-id="3">
+              <button class="arrow-button" onclick="showPreviousReview()">&#8592;</button>
+              <div class="review-image3">
+                <img src="C:\Users\79647\Desktop\Сайт Animyau\картинки\2.jpg" alt="Аватар 3">
+              </div>
+              <div class="review-content">
+                <h3>KRUTISHKAYANA</h3>
+                <p class="review-text">Все чики-пуки пушка бомба. Лучший Сайт по продаже аниме товаров)) Все супер класс!!! Всем рекомендую! Топовые косплеи)</p>
+              </div>
+              <button class="arrow-button" onclick="showNextReview()">&#8594;</button>
+            </div>
+            </div>
+          
+            <a href="#" class="leave-review-button">Оставить отзыв</a>
+          
+
+            <div class="category-container">
+                <div class="category" onclick="location.href='манга.html'">
+                    <img src="C:\Users\79647\Desktop\Сайт Animyau\картинки\манга.jpg" alt="Манга">
+                    <div class="category-name">манга</div>
+                </div>
+                <div class="category" onclick="location.href='фигурки.html'">
+                    <img src="C:\Users\79647\Desktop\Сайт Animyau\картинки\фигурки.jpg" alt="Фигурка">
+                    <div class="category-name">фигурки</div>
+                </div>
+                <div class="category" onclick="location.href='page3.html'">
+                    <img src="C:\Users\79647\Desktop\Сайт Animyau\картинки\image.png" alt="Подушка">
+                    <div class="category-name">подушки</div>
+                </div>
+                <div class="category" onclick="location.href='косплей.html'">
+                    <img src="C:\Users\79647\Desktop\Сайт Animyau\картинки\косплей.jpg" alt="Костюм">
+                    <div class="category-name">косплеи</div>
+                </div>
+            </div>
+
+          <script>
+              let currentReviewId = 1;
+              const reviewsContainer = document.getElementById('reviews-container');
+              const reviews = Array.from(reviewsContainer.querySelectorAll('.review-container'));
+          
+          
+              function showReview(reviewId) {
+                  reviews.forEach(review => {
+                      if (parseInt(review.dataset.reviewId) === reviewId) {
+                          review.classList.remove('hidden');
+                      } else {
+                          review.classList.add('hidden');
+                      }
+                  });
+              }
+          
+              function showNextReview() {
+                  currentReviewId++;
+                  if (currentReviewId > reviews.length) {
+                      currentReviewId = 1;
+                  }
+                  showReview(currentReviewId);
+              }
+          
+              function showPreviousReview() {
+                  currentReviewId--;
+                  if (currentReviewId < 1) {
+                      currentReviewId = reviews.length;
+                  }
+                  showReview(currentReviewId);
+              }
+          
+              // Показываем первый отзыв при загрузке страницы
+              showReview(currentReviewId);
+          
+          </script>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <a href="Главная.html">главная</a>
+            <a href="каталог.html">каталог</a>
+            <a href="оНас.html">о нас</a><br>
+            <div class="footer-social">
+                <br><a href="#"><img src="C:\Users\79647\Desktop\Сайт Animyau\картинки\иконки\free-icon-font-youtube.png" alt="VK"></a>
+                <a href="#"><img src="C:\Users\79647\Desktop\Сайт Animyau\картинки\иконки\free-icon-font-discord.png" alt="Twitter"></a>
+                <a href="#"><img src="C:\Users\79647\Desktop\Сайт Animyau\картинки\иконки\free-icon-font-twitter.png" alt="дс"></a>
+                <a href="mailto:animyau@mail.ru">animyau@mail.ru</a>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p>© аниме магазин в России AniMyau 2024-2025<br>
+            Все права защищены<br>
+            Интернет-магазин аниме аксессуаров, фигурок и манги</p>
+        </div>
+    </footer>
+</body>
+</html>

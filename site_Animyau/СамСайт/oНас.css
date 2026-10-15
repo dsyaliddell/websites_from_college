@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Girassol&display=swap');
+
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: 'Girassol', cursive; /*  Используем Girassol */
+    /* Другие общие стили, если нужны */
+}
+
+/* Стили для шапки */
+header {
+    background-color: #292626;
+    color: #EDEDED;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Стили для логотипа */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px; /* Подстройте размер */
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 1.5em;
+    font-family: 'Girassol', cursive; /* Для названия сайта тоже */
+}
+
+/* Стили для навигации */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav a {
+    display: block;
+    color: #EDEDED;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-family: 'Girassol', cursive; /* Для пунктов меню */
+}
+
+nav a:hover {
+    background-color: #44404A;
+}
+
+/* Стили для иконок */
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons a {
+    margin-left: 15px;
+}
+
+.icons img {
+    height: 30px; /* Подстройте размер иконок */
+    width: 30px;
+}
+/* Стили для dropdown */
+.dropdown {
+    position: relative; /*  Важно для позиционирования dropdown-content */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #292626; /* Цвет фона dropdown */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%; /* Расположить под основным пунктом */
+    left: 0;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: #EDEDED;
+    font-family: 'Girassol', cursive;
+}
+
+.dropdown-content a:hover {
+    background-color: #44404A;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Отобразить dropdown при наведении на "Прочее" */
+}
+/* Стили для иконок */
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons a {
+    margin-left: 15px;
+}
+
+.icons img {
+    height: 30px;
+    width: 30px;
+}
+
+/* Стили для выпадающего меню пользователя */
+.user-icon {
+    position: relative;
+    display: inline-block;
+}
+
+.user-dropdown {
+    display: none; /* Скрыто по умолчанию */
+    position: absolute;
+    background-color: #292626;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #292626;
+    z-index: 1;
+    right: 0;
+    top: 100%;
+}
+
+.user-icon:hover .user-dropdown {
+    display: block; /* Показываем при наведении на иконку */
+}
+
+.user-dropdown:hover {
+    display: block; /* Это необходимо, чтобы меню оставалось видимым при наведении на само меню */
+}
+
+
+.user-dropdown-content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 200px;
+}
+
+.user-dropdown-item {
+    padding: 8px 12px;
+    color: #EDEDED;
+    font-family: 'Girassol', cursive;
+}
+
+.user-dropdown-item:first-child {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.user-dropdown-item label {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.user-dropdown-item input[type="text"],
+.user-dropdown-item input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #FFFAE3;
+    opacity: 0.9;
+    color: #292626;
+    font-family: 'Girassol', cursive;
+    margin-bottom: 4px;
+}
+
+.user-dropdown-item input[type="text"]:focus,
+.user-dropdown-item input[type="password"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+
+
+
+
+body {
+    font-family: 'Girassol', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #44404A;
+    color: #EDEDED;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.image-container {
+    flex: 1;
+    margin-right: 150px;
+}
+.image-container img {
+    width: 100%;
+    border-radius: 50px;
+}
+.content {
+    flex: 1;
+    background-color: #292626;
+    padding: 20px;
+    border-radius: 50px;
+}
+.content h2 {
+    margin-top: 0;
+}
+.content p {
+    line-height: 1.7;
+}
+
+
+.container1 {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #292626;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+h2 {
+    margin-bottom: 20px;
+}
+
+
+
+.review-container {
+    width: 800px; /*  ширина */
+    margin: 20px auto; /*  центровка */
+    padding: 20px;
+    background-color: #292626; /*  цвет фона */
+    color: #EDEDED; /*  цвет текста */
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Распределяем элементы по краям */
+  }
+
+  .review-content {
+    flex-grow: 1; /* Занимаем оставшееся место */
+    padding: 0 20px;
+  }
+
+  .review-image1 {
+    width: 270px; /* Ширина изображения */
+    height: 100px; /* Высота изображения */
+    border-radius: 50%; /* Круглая форма */
+    overflow: hidden; /*  обрезаем выступающие части */
+  }
+
+  .review-image1 img {
+    width: 100%; /* Растягиваем изображение на всю ширину контейнера */
+    height: auto; /* Сохраняем пропорции */
+    display: block; /* Убираем отступы под изображением */
+  }
+
+
+  .review-image2 {
+    width: 150px; /* Ширина изображения */
+    height: 100px; /* Высота изображения */
+    border-radius: 50%; /* Круглая форма */
+    overflow: hidden; /*  обрезаем выступающие части */
+  }
+
+  .review-image2 img {
+    width: 100%; /* Растягиваем изображение на всю ширину контейнера */
+    height: auto; /* Сохраняем пропорции */
+    display: block; /* Убираем отступы под изображением */
+  }
+
+  .review-image3 {
+    width: 180px; /* Ширина изображения */
+    height: 100px; /* Высота изображения */
+    border-radius: 50%; /* Круглая форма */
+    overflow: hidden; /*  обрезаем выступающие части */
+  }
+
+  .review-image3 img {
+    width: 100%; /* Растягиваем изображение на всю ширину контейнера */
+    height: auto; /* Сохраняем пропорции */
+    display: block; /* Убираем отступы под изображением */
+  }
+
+
+  .arrow-button {
+    background-color: transparent;
+    border: none;
+    color: #EDEDED;
+    font-size: 24px;
+    cursor: pointer;
+    outline: none; /* Убираем обводку при фокусе */
+    padding: 10px;
+  }
+
+  .review-text {
+      margin-top: 10px;
+  }
+
+  .hidden {
+      display: none;
+  }
+
+  .leave-review-button {
+    margin: 20px auto 40px; /* Изменили: добавили отступ снизу (40px) */
+    padding: 10px 20px;
+    background-color: #44404A; /* Немного светлее */
+    color: #EDEDED;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Убираем подчеркивание ссылки */
+    text-align: center; /* Центрируем текст */
+    display: block;        /* Чтобы `margin: auto` работал для центрирования */
+}
+
+
+
+
+
+
+.category-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1px; /* Отступ сверху */
+}
+
+.category {
+    font-family: 'Girassol', cursive; /* Шрифт */
+    background-color: #370d0d;
+    border-radius: 40px;
+    padding: 60px; /* Увеличены внутренние отступы */
+    text-align: center;
+    width: 125px; /* Увеличена ширина */
+    height: 125px; /* Добавлена высота */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative;
+    overflow: hidden;
+    margin: 40px; /* Уменьшены внешние отступы */
+}
+
+.category:hover {
+    background-color: #292626;
+}
+
+.category img {
+    width: 100%;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0.6; /* Добавлено прозрачность */
+}
+.category-name {
+    color: #EDEDED;
+    margin-top: 10px;
+    font-size: 24px; /* Увеличенный размер шрифта */
+    line-height: 1.5; /* Высота строки для выравнивания по вертикали */
+    position: absolute;
+    top: 50%; /* Выравнивание по вертикали */
+    left: 50%; /* Выравнивание по горизонтали */
+    transform: translate(-50%, -50%); /* Центрирование текста */
+    z-index: 2;
+}
+
+
+
+/*ФУТЕР */
+        /* Стили для футера */
+        footer {
+            background-color: #292626;
+            color: #FFFAE3;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto; /* Прижимаем футер к низу */
+        }
+
+        .footer-left a {
+            color: #FFFAE3;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+
+        .footer-left a:last-child {
+            margin-right: 0;
+        }
+
+        .footer-left a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-left img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .footer-right {
+            margin-left: auto;
+            text-align: right;
+        }
+
+
+

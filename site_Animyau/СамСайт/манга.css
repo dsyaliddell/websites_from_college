@@ -1,0 +1,612 @@
+@import url('https://fonts.googleapis.com/css2?family=Girassol&display=swap');
+
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: 'Girassol', cursive; /*  Используем Girassol */
+    /* Другие общие стили, если нужны */
+}
+
+/* Стили для шапки */
+header {
+    background-color: #292626;
+    color: #EDEDED;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Стили для логотипа */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px; /* Подстройте размер */
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 1.5em;
+    font-family: 'Girassol', cursive; /* Для названия сайта тоже */
+}
+
+/* Стили для навигации */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav a {
+    display: block;
+    color: #EDEDED;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-family: 'Girassol', cursive; /* Для пунктов меню */
+}
+
+nav a:hover {
+    background-color: #44404A;
+}
+
+/* Стили для иконок */
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons a {
+    margin-left: 15px;
+}
+
+.icons img {
+    height: 30px; /* Подстройте размер иконок */
+    width: 30px;
+}
+/* Стили для dropdown */
+.dropdown {
+    position: relative; /*  Важно для позиционирования dropdown-content */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #292626; /* Цвет фона dropdown */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%; /* Расположить под основным пунктом */
+    left: 0;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: #EDEDED;
+    font-family: 'Girassol', cursive;
+}
+
+.dropdown-content a:hover {
+    background-color: #44404A;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Отобразить dropdown при наведении на "Прочее" */
+}
+/* Стили для иконок */
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons a {
+    margin-left: 15px;
+}
+
+.icons img {
+    height: 30px;
+    width: 30px;
+}
+
+/* Стили для выпадающего меню пользователя */
+.user-icon {
+    position: relative;
+    display: inline-block;
+}
+
+.user-dropdown {
+    display: none; /* Скрыто по умолчанию */
+    position: absolute;
+    background-color: #292626;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #292626;
+    z-index: 1;
+    right: 0;
+    top: 100%;
+}
+
+.user-icon:hover .user-dropdown {
+    display: block; /* Показываем при наведении на иконку */
+}
+
+.user-dropdown:hover {
+    display: block; /* Это необходимо, чтобы меню оставалось видимым при наведении на само меню */
+}
+
+
+.user-dropdown-content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 200px;
+}
+
+.user-dropdown-item {
+    padding: 8px 12px;
+    color: #EDEDED;
+    font-family: 'Girassol', cursive;
+}
+
+.user-dropdown-item:first-child {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.user-dropdown-item label {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.user-dropdown-item input[type="text"],
+.user-dropdown-item input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #FFFAE3;
+    opacity: 0.9;
+    color: #EDEDED;
+    font-family: 'Girassol', cursive;
+    margin-bottom: 4px;
+}
+
+.user-dropdown-item input[type="text"]:focus,
+.user-dropdown-item input[type="password"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+
+
+
+
+
+
+body {
+    background-color: #44404A; /* Темно-серый фон */
+    color: #EDEDED; /* Белый текст */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.title {
+    align-items: flex-start; /* Выравнивание по левому краю */
+    font-size: 32px;
+    margin-bottom: 25px; /* Отступ снизу */
+    margin-top: 20px;    /* Отступ сверху */
+    margin-left: 160px;   /* Отступ слева */
+}
+
+.buttons1 {
+    display: flex;
+    gap: 10px; /* Пробел между кнопками */
+    margin-left: 90px;   /* Отступ слева */
+}
+
+button {
+    padding: 10px 20px;
+    border: 2px solid #EDEDED; /* Белая рамка */
+    font-family: 'Girassol', cursive; /*  Используем Girassol */
+    border-radius: 25px; /* Закругленные углы */
+    background-color: transparent; /* Прозрачный фон */
+    color: #EDEDED;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+
+
+
+
+
+/*ТОВАР!!!!!!!!!!!!!!!!!!!!!!*/
+        /* Секция для карточек товаров */
+        .product-section {
+            padding-left: 100px; /* Отступ слева */
+            padding-top: 20px; /* Отступ сверху для всей секции */
+            display: flex; /* Включаем Flexbox для размещения карточек */
+            flex-wrap: wrap; /* Перенос карточек на новую строку при нехватке места */
+            justify-content: flex-start; /* Выравнивание карточек по левому краю */
+        }
+/* Карточка товара */
+.product-card {
+    margin-right: 90px; /* Отступ справа между карточками */
+    width: 250px; /* Ширина карточки */
+    border-radius: 20px; /* Скругление углов */
+    overflow: hidden; /* Скрытие контента, выходящего за границы */
+    font-family: 'Girassol', cursive; /* Шрифт */
+    color: #EDEDED; /* Цвет текста */
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Расположение элементов в столбец */
+    margin-bottom: 10px; /* Уменьшаем отступ снизу */
+    margin-top: 20px; /* Отступ сверху для всей карточки */
+}
+
+        /* Контейнер изображения */
+        .product-image-container {
+            width: 100%; /* Ширина */
+            height: 350px; /* Высота */
+            border-radius: 20px; /* Скругление углов */
+            overflow: hidden; /* Скрытие контента, выходящего за границы */
+            position: relative; /* Позиционирование относительно контейнера */
+        }
+
+        /* Изображение товара */
+        .product-image {
+            width: 100%; /* Ширина */
+            height: 100%; /* Высота */
+            object-fit: cover; /* Растягивание изображения с обрезкой */
+            border-radius: 20px;
+            transition: opacity 0.3s ease; /* Анимация */
+        }
+
+        /* Второе изображение (скрыто по умолчанию) */
+        .product-image-hover {
+            position: absolute; /* Абсолютное позиционирование */
+            top: 0; /* Выравнивание по верхнему краю */
+            left: 0; /* Выравнивание по левому краю */
+            width: 100%; /* Ширина */
+            height: 100%; /* Высота */
+            object-fit: cover; /* Растягивание изображения с обрезкой */
+            border-radius: 20px;
+            opacity: 0; /* Полностью прозрачное */
+            transition: opacity 0.3s ease; /* Анимация */
+        }
+
+        /* При наведении показываем второе изображение */
+        .product-image-container:hover .product-image-hover {
+            opacity: 1; /* Полностью отображаем */
+        }
+
+        /* При наведении скрываем основное изображение */
+        .product-image-container:hover .product-image {
+            opacity: 0; /* Полностью прозрачное */
+        }
+
+/* Информация о товаре */
+.product-info {
+    padding: 12px; /* Внутренние отступы */
+    text-align: left; /* Выравнивание текста по левому краю */
+    margin-top: -20px; /* Поднимаем блок с информацией о товаре вверх */
+}
+
+/* Название товара */
+.product-title {
+    font-size: 1.2em; /* Размер шрифта */
+    margin-bottom: 5px; /* Отступ снизу */
+    font-weight: normal; /* Убираем жирный */
+}
+
+        /* Цена товара */
+        .product-price {
+            font-size: 1.4em; /* Размер шрифта */
+            margin-bottom: 10px; /* Отступ снизу */
+        }
+
+        /* Кнопки */
+        .product-actions {
+            display: flex; /* Flexbox */
+            justify-content: center; /* Выравнивание по левому краю */
+            align-items: center; /* Выравнивание по вертикали */
+            margin-bottom: 10px; /* Отступ снизу */
+        }
+
+        /* Кнопка "В корзину" */
+        .add-to-cart {
+            background-color: #BB0000; /* Красный фон */
+            color: #EDEDED; /* Белый текст */
+            border: none; /* Убираем рамку */
+            padding: 12px 30px; /* Увеличиваем отступы */
+            border-radius: 15px; /* Скругление углов */
+            cursor: pointer; /* Курсор "рука" */
+            font-size: 1.2em; /* Размер шрифта */
+            flex-grow: 0; /* Отключаем растяжение */
+            margin-right: 10px; /* Отступ справа */
+            height: auto; /* Автоматическая высота, чтобы текст не выходил за рамки */
+            line-height: normal; /* Убираем фиксированную высоту строки, чтобы текст центрировался автоматически */
+            text-decoration: none; /* Убираем подчеркивание */
+            display: flex; /* Flexbox для выравнивания по вертикали */
+            align-items: center; /* Выравнивание текста по вертикали */
+            justify-content: center; /* Выравнивание текста по горизонтали */
+        }
+        
+
+        .add-to-cart:hover {
+            background-color: #8d0909; /* Более темный красный при наведении */
+        }
+
+        .product-ak {
+            opacity: 0.6;             /* Прозрачность: 0.7 (70% видимости) */
+            text-align: right;       /* Выравнивание текста по правому краю */
+        }
+
+        /* Кнопка "Избранное" */
+        .favorite-button {
+            background-color: #BB0000; /* Красный фон */
+            border: none; /* Убираем рамку */
+            padding: 5px; /* Отступы */
+            cursor: pointer; /* Курсор "рука" */
+            width: 51px; /* Ширина */
+            height: 51px; /* Высота */
+            border-radius: 15px; /* Скругление углов */
+            display: flex; /* Flexbox */
+            align-items: center; /* Выравнивание по вертикали */
+            justify-content: center; /* Выравнивание по горизонтали */
+        }
+
+        /* Иконки "Избранное" */
+        .heart-icon {
+            width: 30px; /* Ширина */
+            height: 30px; /* Высота */
+        }
+
+        /* Скрываем иконку "Заполнено" по умолчанию */
+        .heart-icon.favorited {
+            display: none;
+        }
+
+        /* Отображаем иконку "Заполнено", когда карточка "в избранном" */
+        .favorite-button[data-favorited="true"] .heart-icon:not(.favorited) {
+            display: none;
+        }
+
+        .favorite-button[data-favorited="true"] .heart-icon.favorited {
+            display: block;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Основа основ*/
+
+body {
+    background-color: #44404A;
+
+} 
+h1 {
+    text-align: center; /* Add this line to center the h1 element */
+    color: #EDEDED; /* Optional: set the color of the heading to white for better visibility */
+} 
+.search-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 666px; /*  Задаем фиксированную ширину контейнера поиска */
+    margin: 0 auto; /*  Центрируем контейнер  */
+}
+
+.search-input {
+    padding: 12px 20px; /* Отступы внутри поля ввода */
+    border: none; /* Убираем рамку */
+    border-radius: 30px 0 0 30px;  /* Left side rounded - скругление слева */
+    flex-grow: 1; /* Растягиваем поле ввода на всю доступную ширину */
+    background-color: #FFFAE3;  /* Light beige - светло-бежевый цвет */
+    font-size: 16px; /* Размер шрифта */
+    outline: none; /* Убираем обводку при фокусе */
+}
+
+.search-button {
+    background-color: #BB0000; 
+    border: none; 
+    border-radius: 0 30px 30px 0 ; 
+    padding: 12px 20px; /* Отступы внутри кнопки */
+    cursor: pointer; /* Меняем курсор на руку при наведении */
+    display: flex; /* Используем флекс для выравнивания иконки */
+    align-items: center; /* Выравниваем по вертикали */
+    justify-content: center; /* Выравниваем по горизонтали */
+}
+
+.search-button svg {
+    width: 20px; /* Ширина иконки */
+    height: 20px; /* Высота иконки */
+    stroke: #FFFAE3;  /* Beige color for the search icon - бежевый цвет иконки */
+}
+  
+
+
+
+h1 {
+    text-align: center;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 666px;
+    margin: 0 auto; /*  Центрируем контейнер  */
+}
+
+.search-input {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px 0 0 30px;
+    flex-grow: 1;
+    background-color: #FFFAE3;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-button {
+    background-color: #BB0000;
+    border: none;
+    border-radius: 0 30px 30px 0 ;
+    padding: 12px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-button svg {
+    width: 20px;
+    height: 20px;
+    stroke: #FFFAE3;
+}
+
+.pagination-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Added to center the pagination buttons horizontally */
+    margin-top: 20px;   /* Add some space between the search bar and pagination */
+}
+
+.pagination-button {
+    background-color: #BB0000;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.page-number {
+    color: white;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+.current-page {
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+
+
+        
+
+/*ФУТЕР */
+        /* Стили для футера */
+        footer {
+            background-color: #292626;
+            color: #FFFAE3;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto; /* Прижимаем футер к низу */
+        }
+
+        .footer-left a {
+            color: #FFFAE3;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+
+        .footer-left a:last-child {
+            margin-right: 0;
+        }
+
+        .footer-left a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-left img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .footer-right {
+            margin-left: auto;
+            text-align: right;
+        }
+
+
+
+
+
+
+
+
+
+
+
+        
+        .category-container {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-top: 1px; /* Отступ сверху */
+      }
+      
+      .category {
+          font-family: 'Girassol', cursive; /* Шрифт */
+          background-color: #370d0d;
+          border-radius: 40px;
+          padding: 60px; /* Увеличены внутренние отступы */
+          text-align: center;
+          width: 125px; /* Увеличена ширина */
+          height: 125px; /* Добавлена высота */
+          cursor: pointer;
+          transition: background-color 0.3s;
+          position: relative;
+          overflow: hidden;
+          margin: 40px; /* Уменьшены внешние отступы */
+      }
+      
+      .category:hover {
+          background-color: #292626;
+      }
+      
+      .category img {
+          width: 100%;
+          border-radius: 20px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          opacity: 0.6; /* Добавлено прозрачность */
+      }
+      .category-name {
+          color: #EDEDED;
+          margin-top: 10px;
+          font-size: 24px; /* Увеличенный размер шрифта */
+          line-height: 1.5; /* Высота строки для выравнивания по вертикали */
+          position: absolute;
+          top: 50%; /* Выравнивание по вертикали */
+          left: 50%; /* Выравнивание по горизонтали */
+          transform: translate(-50%, -50%); /* Центрирование текста */
+          z-index: 2;
+      }
