@@ -1,0 +1,695 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1B1B1B; 
+    color: #ffffff; 
+    font-family: 'Jura', sans-serif; /* шрифт Jura */
+}
+
+/* шапка ушанка */
+.main-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px 50px; 
+    height: 80px; 
+}
+
+/* логотип */
+.f1-logo {
+    height: 30px; 
+    width: auto;
+    
+    position: absolute;
+    top: 30px; 
+    left: 50px; 
+    z-index: 10; 
+}
+
+.main-nav {
+    position: absolute; 
+    top: 30px; 
+    right: 100px; 
+    z-index: 10; /* поверх фона z индекс */
+    font-family: 'Jura', sans-serif;
+    text-align: right;
+}
+
+
+/* навигация */
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 45px; /* между пунктами меню */
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #EE0001; 
+    font-size: 24px; 
+    font-weight: 700; 
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #ffffff; 
+}
+
+
+
+
+/* текст слева */
+
+.hero-section {
+    margin-top: -110px;
+    min-height: 80vh; 
+    padding: 30px 150px 100px 140px;
+    box-sizing: border-box;
+    
+    background-image: url('img/fon.png'), 
+                      linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)); 
+    background-size: cover;
+    
+    background-position: 50% 0%; 
+    
+    background-repeat: no-repeat;
+    position: relative; 
+}
+
+
+.hero-content {
+    margin-top: 150px;
+    position: relative; 
+    z-index: 5; /* контент поверх/низ */
+}
+
+.vertical-line {
+    width: 3px;
+    height: 300px; 
+    background-color: #F4F4F4; 
+    box-shadow: 0 0 10px #EE0001; 
+    position: absolute;
+    top: 65px; 
+    left: -10px; 
+}
+
+/* сайт назв Питстоп */
+.site-title {
+    font-family: 'Jura', sans-serif;
+    font-size: 60px; 
+    color: #EE0001;
+    margin: 0;
+    line-height: 1;
+    text-shadow: 0 0 15px rgba(238, 0, 1, 0.5); 
+    margin-top: 10px; 
+    padding-left: 25px; 
+}
+
+.highlight-ru {
+    color: #EE0001; 
+    font-size: 30px;
+}
+
+/* заглавление */
+.site-description {
+    font-family: 'Jura', sans-serif;
+    font-size: 20px; 
+    color: #ffffff;
+    max-width: 600px; 
+    line-height: 1.6;
+    padding-left: 25px; /* текст начинается посл линии */
+    margin-top: 50px; 
+}
+
+/* стрелки */
+.download-links {
+    display: flex;
+    gap: 20px;
+    padding-left: 25px;
+    margin-top: 50px;
+}
+
+.arrow-btn {
+    background-color: #FF8C00;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 0 8px rgba(255, 140, 0, 0.8);
+}
+
+.arrow-btn img {
+    width: 20px;
+    margin-top: 5px;
+    height: auto;
+    filter: brightness(0.1); 
+}
+
+.arrow-btn:hover {
+    background-color: #e67e00;
+}
+
+
+
+/* кнопка подписки */
+.subscribe-btn {
+    text-decoration: none;
+    font-family: 'Jura', sans-serif;
+    font-size: 20px; 
+    color: #FF8C00; 
+    
+    background-color: transparent; 
+    
+    border: 1px solid #FF8C00; 
+    padding: 10px 30px; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 25px; 
+    
+    margin-top: 60px; 
+    margin-left: 25px; 
+    
+    text-align: center;
+    box-shadow: 0 0 12px rgba(255, 140, 0, 0.4);
+}
+
+.subscribe-btn:hover {
+    text-decoration: none;
+    background-color: #1F1F1F; 
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.8);
+}
+
+
+
+/* календаль */
+.simple-image-gallery {
+    background-color: #1B1B1B; 
+    padding: 60px 0; 
+    font-family: 'Jura', sans-serif;
+    color: #E0E0E0;
+}
+
+.simple-image-gallery .container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Заголовок */
+.simple-image-gallery .section-title {
+    color: #EE0001; 
+    font-size: 36px;
+    margin-bottom: 40px;
+    margin-left: 40px; 
+    text-shadow: 0 0 10px rgba(238, 0, 1, 0.6);
+}
+
+/* ряд 3 */
+.image-row {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    gap: 30px; /* Промежуток */
+    padding: 0 40px; /* слева/справа */
+}
+
+.image-row img {
+    width: 80px; 
+    flex: 1 1 calc(33.333% - 20px); 
+    max-width: calc(33.333% - 20px);
+    
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.image-row img:hover {
+    transform: scale(1.03);
+}
+
+
+
+
+
+
+
+
+/* Новости */
+.news-section {
+    background-color: #1B1B1B; /* Темный фон */
+    padding: 60px 0; 
+    font-family: 'Jura', sans-serif;
+    color: #E0E0E0;
+}
+
+.news-section .container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Заголовок  */
+.news-section .section-title {
+    color: #EE0001;
+    font-size: 36px;
+    margin-top: -40px;
+    margin-bottom: 60px;
+    margin-left: 40px; 
+    text-shadow: 0 0 10px rgba(238, 0, 1, 0.6);
+}
+
+/* колонки */
+.news-layout {
+    display: flex;
+    gap: 50px; /* Разделение между секциями */
+    padding: 0 40px;
+}
+
+/* --- лево --- */
+.main-news-block {
+    flex: 3; 
+    display: flex;
+    flex-direction: column;
+    gap: 40px; 
+}
+
+.main-item {
+    display: flex;
+    gap: 25px;
+    padding-bottom: 30px;
+}
+
+.news-thumbnail {
+    width: 280px; /* изображение */
+    height: 140px; 
+    object-fit: cover; 
+    flex-shrink: 0; 
+}
+
+.news-content h3 {
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.news-content p {
+    color: #B0B0B0;
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.news-date {
+    display: block;
+    color: #AAAAAA;
+    font-size: 13px;
+}
+
+/* --- правые новости --- */
+.latest-news-feed {
+    flex: 1; 
+    min-width: 300px; 
+    padding-left: 15px; 
+}
+
+.feed-date-header {
+    display: block;
+    color: #AAAAAA;
+    font-size: 14px;
+    margin-bottom: 20px;
+    border-left: 2px solid #EE0001; /* линия перед датой */
+    padding-left: 10px;
+}
+
+.feed-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 18px;
+    align-items: baseline;
+}
+
+.feed-time {
+    color: #EE0001; /* время */
+    font-size: 14px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.feed-item p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+
+
+
+/* результаты */
+.results-section {
+    background-color: #1B1B1B;
+    margin-top: -80px;
+    padding: 60px 0; 
+    font-family: 'Jura', sans-serif;
+    color: #E0E0E0;
+}
+
+.results-section .container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.results-section .section-title {
+    color: #EE0001;
+    font-size: 36px;
+    margin-bottom: 50px; 
+    margin-left: 40px;
+    text-shadow: 0 0 10px rgba(238, 0, 1, 0.6);
+}
+
+/* две таблицы рядом */
+.results-tables-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px; /* Расстояние между таблиц */
+    padding: 0 40px;
+}
+
+.results-table {
+    flex: 1; /* Обе таблицы занимают равное место */
+}
+
+.results-table h3 {
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+/* №, Спортсмен, Очки */
+.table-header {
+    display: grid;
+    grid-template-columns: 40px 40px 1fr 80px; /* Фиксированные ширины */
+    gap: 15px;
+    font-size: 14px;
+    color: #EE0001; 
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(238, 0, 1, 0.4);
+}
+
+/* стиль таблицы */
+.table-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Расстояние между стр */
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 40px 40px 1fr 80px;
+    gap: 15px;
+    align-items: center;
+    padding: 4px 0;
+    font-size: 16px;
+}
+
+/*  1-е место */
+.table-row.highlight {
+    background-color: rgba(178, 35, 35, 0.218);
+    border-radius: 3px;
+    color: #FFFFFF;
+}
+
+.col-num {
+    color: #AAAAAA; /* номер */
+    text-align: center;
+}
+
+.col-name {
+    color: #FFFFFF;
+}
+
+.col-points {
+    text-align: right;
+    color: #FFFFFF;
+    margin-right: 20px;
+}
+
+.col-flag img {
+    width: 22px; /* флаг */
+    height: auto;
+    display: block;
+}
+
+
+
+
+/*  команды */
+.teams-section-simple {
+    background-color: #1B1B1B;
+    padding: 60px 0; 
+    font-family: 'Jura', sans-serif;
+    margin-top: -40px;
+}
+
+.teams-section-simple .container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.teams-section-simple .section-title {
+    color: #EE0001;
+    font-size: 36px;
+    margin-bottom: 50px;
+    margin-left: 40px;
+    text-shadow: 0 0 10px rgba(238, 0, 1, 0.6);
+}
+
+.teams-grid-simple {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto auto; 
+    gap: -10px 100px; /* Вертикальный и горизонтальный отступ */
+    padding: 0 30px;
+}
+
+.team-card-simple {
+    position: relative;
+    overflow: hidden; 
+    padding: 30px;
+}
+
+.team-card-simple img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+
+
+/* истории Льюиса */
+.history-section {
+    background-color: #1B1B1B;
+    margin-top: -100px;
+    padding: 60px 0; 
+    font-family: 'Jura', sans-serif;
+    color: #ffffff;
+}
+
+.history-section .container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.history-section .section-title {
+    color: #EE0001;
+    font-size: 36px;
+    margin-bottom: 30px; 
+    margin-left: 40px;
+    text-shadow: 0 0 10px rgba(238, 0, 1, 0.6);
+}
+
+.history-intro {
+    display: flex;
+    gap: 40px;
+    padding: 0 40px;
+    margin-bottom: 30px;
+}
+
+.intro-image {
+    width: 45%; 
+    height: auto;
+}
+
+.intro-text {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.intro-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+.timeline-bar {
+    background-color: rgba(238, 0, 0, 0.052);
+    text-align: right;
+    padding: 12px 0;
+    margin: 40px 40px;
+    border-bottom: 1px solid #a22323b0;
+}
+.timeline-bar span {
+    color: #EE0001;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.legends-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 40px;
+    margin-bottom: 50px;
+}
+
+.legend-card {
+    flex: 1;
+    text-align: center;
+}
+
+.legend-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    transition: border-color 0.3s;
+}
+.legend-card img:hover {
+    border-color: #EE0001;
+}
+
+.legend-name {
+    display: block;
+    color: #EE0001; 
+    font-size: 18px;
+    text-decoration: none;
+    margin-bottom: 3px;
+}
+.legend-name:hover {
+    text-decoration: underline;
+}
+
+.legend-years {
+    display: block;
+    color: #AAAAAA;
+    font-size: 13px;
+}
+
+.history-conclusion {
+    display: flex;
+    gap: 40px;
+    padding: 0 40px;
+}
+
+.conclusion-text {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.conclusion-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+.conclusion-image {
+    width: 40%; 
+    height: auto;
+}
+
+
+
+
+
+/* ---  стили футера --- */
+.site-footer-final {
+    background-color: #6C1515; 
+    padding: 30px 0;
+    font-family: 'Jura', sans-serif;
+    color: #EBEBEB; 
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.footer-content-wrapper {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+}
+
+/* --- лево --- */
+.footer-left-group {
+    display: flex;
+    margin-top: 60px;
+    gap: 5px;
+    align-items: flex-start;
+    max-width: 60%;
+}
+
+.footer-logo img {
+    width: 60px; /* лого светофора */
+    height: auto;
+}
+
+.footer-text-group {
+    font-size: 14px;
+}
+.copyright-line, .disclaimer-line {
+    margin: 0 0 5px 0; /* лишние отступы */
+}
+
+/* --- право --- */
+.footer-right-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px; /* Отступ между контактами и кнопками */
+}
+
+.contact-info {
+    text-align: right;
+    line-height: 1;
+    font-size: 15px;
+}
+.contact-email {
+    color: #FFFFFF; 
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+.contact-email:hover {
+    text-decoration: underline;
+}
+.hashtag {
+    color: #FFFFFF;
+}
+.download-linksS {
+    display: flex;
+    gap: 20px;
+    padding-left: 25px;
+    margin-top: 5px;
+}

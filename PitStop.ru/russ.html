@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary-orange: #FF8C00;
+            --color-accent-red: #FF8C00;
+            --color-border-dark: #8b0000;
+            --color-text-light: #e67e00;
+            --color-background-dark: #1B1B1B;
+            --color-container-bg: rgba(30, 30, 30, 0.9);
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: var(--color-background-dark);
+            font-family: 'Jura', sans-serif;
+            color: var(--color-primary-orange);
+        }
+
+        .form-container {
+            position: relative;
+            padding: 0 50px;
+        }
+
+        .subscription-box {
+            width: 600px;
+            padding: 40px 30px;
+            border-radius: 20px;
+            background-color: var(--color-container-bg);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+            border: 1px solid #333;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 35px;
+            color: var(--color-primary-orange);
+            letter-spacing: 1.5px;
+            font-weight: 700;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: var(--color-primary-orange);
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid var(--color-border-dark);
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: var(--color-text-light);
+            box-sizing: border-box;
+            font-family: 'Jura', sans-serif;
+            font-size: 16px;
+        }
+
+        input::placeholder {
+            color: var(--color-primary-orange);
+            opacity: 0.7;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--color-accent-red);
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 25px;
+            margin-bottom: 30px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+            border: 1px solid var(--color-border-dark);
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 3px;
+            cursor: pointer;
+            -webkit-appearance: none;
+            appearance: none;
+        }
+
+        .checkbox-group input[type="checkbox"]:checked {
+            background-color: var(--color-border-dark);
+            border-color: var(--color-accent-red);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E");
+            background-size: 12px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .checkbox-label {
+            color: var(--color-accent-red);
+            font-size: 13px;
+            line-height: 1.4;
+            font-weight: 400;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--color-accent-red);
+            color: #111;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: var(--color-primary-orange);
+            color: #000;
+            box-shadow: 0 0 10px var(--color-primary-orange);
+        }
+
+        .decorative-line {
+            position: absolute;
+            width: 50px;
+            height: 4px;
+            background-color: var(--color-primary-orange);
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.8;
+        }
+
+        .decorative-line.left {
+            left: -60px;
+        }
+
+        .decorative-line.right {
+            right: -60px;
+        }
+
+        #message {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="subscription-box">
+            <h2>Подписаться на рассылку</h2>
+            <form id="subscriptionForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="consent" name="consent" required>
+                    <label for="consent" class="checkbox-label">
+                        Соглашаюсь получать рекламу, нескучные письма, подборки новостей и всякие интересности
+                    </label>
+                </div>
+                <button type="submit" id="submitButton">Подписаться</button>
+            </form>
+            <div id="message"></div>
+        </div>
+        <div class="decorative-line left"></div>
+        <div class="decorative-line right"></div>
+    </div>
+
+    <!--  Supabase -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script>
+        //  данные Supabase
+        const supabaseUrl = 'https://zisthhipfigyonlzftty.supabase.co'; // ссылка на базу
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inppc3RoaGlwZmlneW9ubHpmdHR5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk2NjYyNjIsImV4cCI6MjA4NTI0MjI2Mn0.xUZ1w_Duyn6FlugNV6Aw7ox-kCsBt7KZ_2vjKzv3DsM';
+        // публичный ключ 
+        // создаем клиент
+        const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+        console.log('Supabase client создан');
+        
+        const form = document.getElementById('subscriptionForm');
+        const messageElement = document.getElementById('message');
+        
+        // тест подключения для выявления ошибок
+        async function testConnection() {
+            try {
+                const { data, error } = await supabaseClient
+                    .from('users_data')
+                    .select('count', { count: 'exact', head: true });
+                
+                if (error) {
+                    console.error('Ошибка подключения к таблице:', error);
+                    if (error.code === '42P01') {
+                        showMessage('Таблица users_data не существует. Создайте ее в Supabase.', 'error');
+                    }
+                } else {
+                    console.log('Подключение к таблице users_data успешно!');
+                }
+            } catch (err) {
+                console.error('Ошибка подключения:', err);
+            }
+        }
+        
+        // тест при загрузке
+        window.addEventListener('DOMContentLoaded', testConnection);
+        
+        function showMessage(text, type = 'info') {
+            messageElement.textContent = text;
+            messageElement.style.display = 'block';
+            messageElement.style.padding = '10px';
+            messageElement.style.borderRadius = '5px';
+            messageElement.style.marginTop = '15px';
+            messageElement.style.fontWeight = 'bold';
+            
+            if (type === 'success') {
+                messageElement.style.backgroundColor = '#155724';
+                messageElement.style.color = '#d4edda';
+            } else if (type === 'error') {
+                messageElement.style.backgroundColor = '#721c24';
+                messageElement.style.color = '#f8d7da';
+            } else {
+                messageElement.style.backgroundColor = '#856404';
+                messageElement.style.color = '#fff3cd';
+            }
+            
+            if (type === 'success') {
+                setTimeout(() => {
+                    messageElement.style.display = 'none';
+                }, 5000);
+            }
+        }
+        
+        form.addEventListener('submit', async function(event) {
+            event.preventDefault();
+            showMessage('Отправка данных...', 'info');
+            
+            const userName = document.getElementById('name').value.trim();
+            const userEmail = document.getElementById('email').value.trim();
+            const userConsent = document.getElementById('consent').checked;
+            
+            if (!userConsent) {
+                showMessage('Необходимо дать согласие на рассылку.', 'error');
+                return;
+            }
+            
+            if (!userEmail || !userEmail.includes('@')) {
+                showMessage('Введите корректный email адрес.', 'error');
+                return;
+            }
+            
+            try {
+                console.log('Отправка данных в users_data:', { userName, userEmail });
+                
+                //  'subscribers'
+                const { data, error } = await supabaseClient
+                    .from('users_data')  // имя таблицы
+                    .insert([{
+                        name: userName,
+                        email: userEmail
+                    }])
+                    .select(); // .select() чтобы увидеть результат
+                
+                console.log('Ответ Supabase:', { data, error });
+                
+                if (error) {
+                    console.error('Детали ошибки:', error);
+                    
+                    if (error.code === '23505') {
+                        showMessage('Этот email уже используется!', 'error');
+                    } else if (error.code === '42501') {
+                        showMessage('Ошибка RLS доступа. Настройте политики INSERT для таблицы users_data', 'error');
+                    } else if (error.code === '42P01') {
+                        showMessage('Таблица users_data не найдена. Создайте ее через SQL: CREATE TABLE users_data (id BIGINT GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY, name TEXT NOT NULL, email TEXT NOT NULL UNIQUE)', 'error');
+                    } else {
+                        showMessage(`Ошибка: ${error.message}`, 'error');
+                    }
+                } else {   // если ошибок нет то 
+                    console.log('Данные успешно сохранены в users_data:', data);
+                    showMessage('✅ Вы успешно подписались!', 'success');
+                    form.reset();
+                }
+            } catch (err) {   // если ошибока то 
+                console.error('Неожиданная ошибка:', err);
+                showMessage('Сетевая ошибка. Проверьте подключение.', 'error');
+            }
+        });
+    </script>
+</body>
+</html>         
